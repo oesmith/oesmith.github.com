@@ -1,0 +1,104 @@
+---
+layout: post
+title: Using connect-assetmanager with sass and coffee-script
+---
+
+<p>I&#8217;m a big fan of using as few curly-brackets as possible in my code, which means I love writing my stylesheets using <a href="http://sass-lang.com/">Sass</a> and my javascripts using <a href="http://jashkenas.github.com/coffee-script/">CoffeeScript</a>.</p>
+
+
+
+<p>Because I love fast websites too, I also mash all my assets together using <a href="https://github.com/mape/connect-assetmanager">connect-assetmanager</a>.  However, out of the box, connect-assetmanager doesn&#8217;t automatically compile Sass or CoffeeScript.</p>
+
+
+
+<p>It&#8217;s not difficult to get it working though.  All you need to do is write a couple of short preManiupulate handlers, like so:</p>
+
+
+
+<pre><code># handlers.coffee
+
+sass = require 'sass'
+
+coffee = require 'coffee'
+
+
+
+exports.sassRenderer = (file, path, index, isLast, callback) -&gt;
+
+  if /\.sass/.test path
+
+    console.log "Compiling #{path}"
+
+    callback sass.render(file)
+
+  else
+
+    callback file
+
+
+
+exports.coffeeRenderer = (file, path, index, isLast, callback) -&gt;
+
+  if /\.coffee/.test path
+
+    console.log "Compiling #{path}"
+
+    callback coffee.compile(file)
+
+  else
+
+    callback file
+
+</code></pre>
+
+
+
+<p>Now all you need to do is insert these into your expressjs config and you&#8217;re good to go!</p>
+
+
+
+<pre><code># server.coffee
+
+handlers = require 'handlers'
+
+
+
+# ...
+
+
+
+app.use assetManager
+
+  js:
+
+    route: /\/assets\/js\/[0-9]+\/.*\.js/
+
+    path: './assets/javascripts/'
+
+    dataType: 'javascript'
+
+    files: ['sprintf.js','main.coffee']
+
+    preManipulate:
+
+      '^': [handlers.coffeeRenderer]
+
+  css:
+
+    route: /\/assets\/css\/[0-9]+\/.*\.css/
+
+    path: './assets/stylesheets/'
+
+    dataType: 'css'
+
+    files: ['style.sass']
+
+    preManipulate:
+
+      '^': [handlers.sassRenderer]
+
+</code></pre>
+
+
+
+<p>Easy!</p>

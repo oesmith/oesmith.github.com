@@ -1,0 +1,38 @@
+---
+layout: post
+title: Running openoffice/libreoffice as a service
+---
+
+<p>So, you&#8217;re trying to use JODConverter or unoconverter, you&#8217;ve set up openoffice to launch as a service in the background somewhere, but it&#8217;s not going anywhere, and all you&#8217;re seeing in your logs is</p>
+
+
+
+<pre><code>creation of executable memory area failed: Permission denied
+
+creation of executable memory area failed: Permission denied
+
+creation of executable memory area failed: Permission denied
+
+creation of executable memory area failed: Permission denied
+
+</code></pre>
+
+
+
+<p>The solution, my friend, is to make sure that the openoffice process gets a writable path in its HOME environment variable.  In my case, the supervisord config entry looks like this:</p>
+
+
+
+<pre><code>[program:openoffice]
+
+command=/usr/lib64/openoffice/program/soffice.bin -headless -nofirststartwizard -accept="socket,host=localhost,port=8100;urp;StarOffice.Service"
+
+environment=HOME="/tmp"
+
+user=www-data
+
+</code></pre>
+
+
+
+<p>Hopefully this will save someone else the hour of fruitless hackery that I&#8217;ve been through to get to this point.</p>

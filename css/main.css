@@ -1,0 +1,103 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+  margin: 0 auto;
+  width: 760px;
+  padding: 0 10px;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h1 a, h1 a:visited, h1 a:active {
+  color: blue;
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: normal;
+}
+
+ul.posts {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #888;
+}
+
+ul.posts li span {
+  font-family: Menlo, Monaco, Inconsolata, Consolas, monospace;
+  font-size: 12px;
+  color: #999;
+  margin-right: 5px;
+}
+
+ul.posts li a {
+  margin-left: 5px;
+}

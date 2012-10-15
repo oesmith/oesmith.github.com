@@ -1,0 +1,86 @@
+---
+layout: post
+title: Graceful server shutdown with node.js / express
+---
+
+<p><a href="http://howmanyleft.co.uk">howmanyleft.co.uk</a> runs its node.js workers behind supervisord.  To avoid dropping requests with <a href="http://httpcats.herokuapp.com/502">502s</a> when restarting workers, I hook into the SIGTERM signal and call <a href="http://nodejs.org/docs/latest/api/http.html#server.close">close()</a> on the HTTP server. This stops the server from listening for new connections, and once all the open connections are complete, the worker exits.</p>
+
+
+
+<p>Here&#8217;s a quick example:</p>
+
+
+
+<pre><code>var http = require('http');
+
+
+
+var app = http.createServer(function (req, res) {
+
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+
+  setTimeout(function () { res.end('OK\n'); }, 5000);
+
+});
+
+
+
+process.on('SIGTERM', function () {
+
+  console.log("Closing");
+
+  app.close();
+
+});
+
+
+
+app.listen(3000);
+
+</code></pre>
+
+
+
+<p>Since I&#8217;m using redis on howmanyleft, I need to close my redis connection gracefully too.  The <a href="http://nodejs.org/docs/latest/api/http.html#event_close_">close</a> event on the HTTP server fires when all connections have closed, so close my redis connection there (<a href="https://github.com/mranney/node_redis">node_redis</a> flushes all active redis commands when you call quit, so you don&#8217;t lose any data).</p>
+
+
+
+<pre><code>var http = require('http'),
+
+    redis = require('redis').createClient();
+
+
+
+var app = http.createServer(function (req, res) {
+
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+
+  setTimeout(function () { res.end('OK\n'); }, 5000);
+
+});
+
+
+
+process.on('SIGTERM', function () {
+
+  console.log("Closing");
+
+  app.close();
+
+});
+
+
+
+app.on('close', function () {
+
+  console.log("Closed");
+
+  redis.quit();
+
+});
+
+
+
+app.listen(3000);
+
+</code></pre>

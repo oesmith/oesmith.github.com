@@ -1,0 +1,20 @@
+---
+layout: post
+title: PyOpenSSL in a virtualenv on OS X
+---
+
+<p>If you&#8217;re a Python programmer, no doubt you&#8217;re now familiar with <a href="http://www.virtualenv.org/">virtualenv</a>.  One of its nicest features is <code>--no-site-packages</code>, which isolates your virtual environment from any packages that are already installed globally.</p>
+
+
+
+<p>However, if you&#8217;re on OS X, that means you can&#8217;t use the OpenSSL library that&#8217;s installed by default.  Trying to <code>easy_install</code> or <code>pip install</code> pyopenssl into your virtualenv won&#8217;t work, since OS X doesn&#8217;t ship with OpenSSL headers.</p>
+
+
+
+<p>The solution to this little problem is to symlink the system OpenSSL library into your virtualenv:</p>
+
+
+
+<pre><code>ln -sf /System/Library/Frameworks/Python.framework/Versions/2.6/Extras/lib/python/OpenSSL lib/python2.6/
+
+</code></pre>

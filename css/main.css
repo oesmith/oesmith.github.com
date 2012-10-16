@@ -65,8 +65,6 @@ img {
    ========================================================================== */
 
 body {
-  margin: 0 auto;
-  width: 720px;
   padding: 0 24px;
   font-family: ABeeZee, sans-serif;
 }
@@ -116,4 +114,15 @@ pre {
   padding: 10px 20px;
   border: 1px solid #ddd;
   background: #eee;
+  overflow: auto;
+  white-space: pre;
+  word-wrap: normal;
 }
+
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0 auto;
+    width: 720px;
+  }
+}
+

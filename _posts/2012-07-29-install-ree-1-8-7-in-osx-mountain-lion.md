@@ -1,13 +1,14 @@
 ---
 layout: post
 title: Install Ruby Enterprise Edition 1.8.7 in OS X Mountain Lion
+alias: /post/28278210238/install-ruby-enterprise-edition-1-8-7-in-os-x-mountain
 ---
 
 Upgrading to Mountain Lion will wipe your old dev environment, so this is what
 you'll need to get back to work on ree-1.8.7:
 
 **1. Install XCode command-line tools.**
-Available from the *Preferences > Download panel in XCode, or as a separate
+Available from the *Preferences > Download* panel in XCode, or as a separate
 download from the Apple Developer site.
 
 **2. Install gcc-4.2.**
@@ -20,8 +21,8 @@ repository.
 
 **3. Install xquartz.**
 The OS X upgrade will also remove your old X11.app installation, so go grab
-xquartz from http://xquartz.macosforge.org/landing/ and install it (you'll need
-v2.7.2 or later for Mountain Lion).
+xquartz from [macosforge][1] and install it (you'll need v2.7.2 or later for
+Mountain Lion).
 
 **4. Install ree.**
 Remember to add the path to the xquartz X11 includes in CPPFLAGS and the path
@@ -31,3 +32,5 @@ should work for rvm.
     CPPFLAGS=-I/opt/X11/include \
       CC=/usr/local/bin/gcc-4.2 \
       rbenv install ree-1.8.7-2012.02
+
+[1]: http://xquartz.macosforge.org/landing/

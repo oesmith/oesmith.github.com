@@ -3,7 +3,6 @@ layout: post
 title: Install Ruby Enterprise Edition 1.8.7 in OS X Mountain Lion
 alias: /post/28278210238/install-ruby-enterprise-edition-1-8-7-in-os-x-mountain
 ---
-
 Upgrading to Mountain Lion will wipe your old dev environment, so this is what
 you'll need to get back to work on ree-1.8.7:
 

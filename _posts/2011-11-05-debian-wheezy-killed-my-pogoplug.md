@@ -3,7 +3,6 @@ layout: post
 title: Debian Wheezy Killed My Pogoplug
 alias: /post/12364561419/debian-wheezy-killed-my-pogoplug
 ---
-
 After months of running a hybrid sarge/wheezy installation on my Pogoplug (the
 wheezy bits needed for [OS X Lion Time Machine support in netatalk][1]), a
 power cut forced a reboot.  Unfortunately the poor thing never came back to

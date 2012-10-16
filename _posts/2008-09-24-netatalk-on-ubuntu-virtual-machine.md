@@ -3,7 +3,6 @@ layout: post
 title: Netatalk on an Ubuntu virtual machine
 alias: /post/470778673/netatalk-on-an-ubuntu-virtual-machine
 ---
-
 I tend to develop on a MacBook running OS X Leopard. In order to keep my main
 Leopard system clean and tidy, I use Parallels desktop to run my development
 environments in virtual machines. Parallels is jolly good at sharing data with
@@ -15,7 +14,7 @@ Lots has been written about what it takes to install and tweak netatalk to get
 it to talk happily with Leopard, so I won’t go into the problems here. All you
 need to know should be found at the following links.
 
-* [[hellinga.org]: Secure passwords with Netatalk][1]
+* [hellinga.org: Secure passwords with Netatalk][1]
 * [Sakuzaku – Essays – Making netatalk Work on Debian with Leopard][2]
 * [damontimm.com How to: Install Netatalk (AFP) on Ubuntu with Encrypted Authentication][3]
 

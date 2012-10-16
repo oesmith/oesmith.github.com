@@ -3,7 +3,6 @@ layout: post
 title: Graceful server shutdown with node.js / express
 alias: /post/15532216845/graceful-server-shutdown-with-node-js-express
 ---
-
 [howmanyleft.co.uk][1] runs its node.js workers behind supervisord.  To avoid
 dropping requests with [502s][2] when restarting workers, I hook into the
 SIGTERM signal and call [close()][3] on the HTTP server. This stops the server
@@ -29,7 +28,7 @@ Here's a quick example:
 Since I'm using redis on howmanyleft, I need to close my redis connection
 gracefully too.  The [close][4] event on the HTTP server fires when all
 connections have closed, so close my redis connection there.  [node_redis][5]
-flushes all active redis commands when you call quit, so I won`t lose any
+flushes all active redis commands when you call quit, so I won't lose any
 data.
 
     var http = require('http'),

@@ -3,7 +3,6 @@ layout: post
 title: Make TimeMachine in OS X Lion work with Debian Squeeze (stable) netatalk servers
 alias: /post/7897354360/make-timemachine-in-os-x-lion-work-with-debian-squeeze
 ---
-
 All you need to do to get TimeMachine running again is to install the netatalk
 package from unstable.  It's a really simple process.  First add the wheezy
 (testing) repository to your apt configuration.

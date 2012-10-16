@@ -80,6 +80,10 @@ h1 a, h1 a:visited, h1 a:active {
   line-height: 30px;
 }
 
+article a, article a:visited, article a:active {
+  color: #D55121;
+}
+
 h2 {
   font-size: 22px;
   line-height: 33px;

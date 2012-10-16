@@ -84,11 +84,25 @@ article a, article a:visited, article a:active {
   color: #D55121;
 }
 
+article img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
 h2 {
   font-size: 22px;
   line-height: 33px;
   font-weight: normal;
   color: #666;
+  border-bottom: 1px solid #aaa;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  margin: 1em 0;
 }
 
 ul.posts {

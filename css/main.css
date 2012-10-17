@@ -99,10 +99,24 @@ a, a:visited, a:active {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0.67em 0 0 0;
+}
+
 h1 a, h1 a:visited, h1 a:active {
   color: #D55121;
-  font-size: 20px;
-  line-height: 30px;
+}
+
+.tagline {
+  font-size: 14px;
+  line-height: 22px;
+  color: #888;
+}
+
+.social {
+  margin: 10px 0;
 }
 
 article:after {
@@ -133,9 +147,17 @@ article time {
 }
 
 body > footer {
-  border-top: 1px solid #aaa;
+  /* border-top: 1px solid #aaa; */
   padding: 1em 0;
   margin-top: 2em;
+}
+
+body > footer p {
+  font-size: 12px;
+  line-height: 30px;
+  padding: 0;
+  margin: 0;
+  color: #ccc;
 }
 
 h2 {
@@ -189,6 +211,23 @@ pre {
   body {
     margin: 0 auto;
     width: 720px;
+  }
+  body > header {
+    height: 60px;
+  }
+  body > header h1 {
+    float: left;
+    line-height: 40px;
+    margin: 15px 10px 5px 0;
+  }
+  body > header .tagline {
+    float: left;
+    line-height: 35px;
+    margin: 20px 10px 0 0;
+  }
+  body > header .social {
+    float: right;
+    margin: 12px 0 5px 0;
   }
 }
 

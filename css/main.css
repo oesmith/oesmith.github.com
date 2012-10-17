@@ -65,20 +65,20 @@ img {
 .fc-webicon:hover { margin: -1px 0 1px; -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); }
 
 /* Github */
-.no-svg .fc-webicon.github { background: url("images/fc-webicon-github-m.png"); }
-.svg .fc-webicon.github { background: url("images/fc-webicon-github.svg"); }
+.no-svg .fc-webicon.github { background: url("/images/fc-webicon-github-m.png"); }
+.svg .fc-webicon.github { background: url("/images/fc-webicon-github.svg"); }
 
 /* LinkedIn */
-.no-svg .fc-webicon.linkedin { background: url("images/fc-webicon-linkedin-m.png"); }
-.svg .fc-webicon.linkedin { background: url("images/fc-webicon-linkedin.svg"); }
+.no-svg .fc-webicon.linkedin { background: url("/images/fc-webicon-linkedin-m.png"); }
+.svg .fc-webicon.linkedin { background: url("/images/fc-webicon-linkedin.svg"); }
 
 /* Mail */
-.no-svg .fc-webicon.mail { background: url("images/fc-webicon-mail-m.png"); }
-.svg .fc-webicon.mail { background: url("images/fc-webicon-mail.svg"); }
+.no-svg .fc-webicon.mail { background: url("/images/fc-webicon-mail-m.png"); }
+.svg .fc-webicon.mail { background: url("/images/fc-webicon-mail.svg"); }
 
 /* Twitter */
-.no-svg .fc-webicon.twitter { background: url("images/fc-webicon-twitter-m.png"); }
-.svg .fc-webicon.twitter { background: url("images/fc-webicon-twitter.svg"); }
+.no-svg .fc-webicon.twitter { background: url("/images/fc-webicon-twitter-m.png"); }
+.svg .fc-webicon.twitter { background: url("/images/fc-webicon-twitter.svg"); }
 
 
 /* ==========================================================================
@@ -136,19 +136,6 @@ body > footer {
   border-top: 1px solid #aaa;
   padding: 1em 0;
   margin-top: 2em;
-}
-
-body > footer ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  height: 22px;
-}
-
-body > footer li {
-  padding: 0;
-  margin: 0 1em 0 0;
-  float: left;
 }
 
 h2 {

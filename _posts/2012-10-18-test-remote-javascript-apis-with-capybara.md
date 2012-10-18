@@ -1,14 +1,15 @@
 ---
 layout: post
-title: Test remote javascript APIs with Capybara
+title: Test remote javascript APIs with Capybara and puffing-billy
 ---
 Testing remote APIs is easy in Ruby.  Libraries like [webmock][1], [vcr][2] and
 [artifice][3] give you all the tools you need to ensure that you're sending the
 right requests to the right remote endpoints.
 
-Testing becomes a lot more difficult when it's your Javascript code that's
-making the requests.  Capybara gives you loads of tools, but it doesn't let
-you stub or mock responses to requests that originate from within the browser.
+However, it becomes a lot more difficult when it's your **Javascript** code
+that's making the requests.  Using requests specs with Capybara gives you loads
+of tools to control the browser, but it doesn't let you stub or mock responses
+to requests that originate from within the browser.
 
 This is where [puffing-billy][4] saves the day.  It's a request stubbing
 library *for browsers*.  It spawns a HTTP(S) proxy server that it uses to

@@ -14,47 +14,51 @@ doesn't automatically compile Sass or CoffeeScript.
 It's not difficult to get it working though.  All you need to do is write a
 couple of short `preManiupulate` handlers, like so:
 
-    # handlers.coffee
-    sass = require 'sass'
-    coffee = require 'coffee'
+{% highlight coffeescript %}
+# handlers.coffee
+sass = require 'sass'
+coffee = require 'coffee'
 
-    exports.sassRenderer = (file, path, index, isLast, callback) ->
-      if /\.sass/.test path
-        console.log "Compiling #{path}"
-        callback sass.render(file)
-      else
-        callback file
+exports.sassRenderer = (file, path, index, isLast, callback) ->
+  if /\.sass/.test path
+    console.log "Compiling #{path}"
+    callback sass.render(file)
+  else
+    callback file
 
-    exports.coffeeRenderer = (file, path, index, isLast, callback) ->
-      if /\.coffee/.test path
-        console.log "Compiling #{path}"
-        callback coffee.compile(file)
-      else
-        callback file
+exports.coffeeRenderer = (file, path, index, isLast, callback) ->
+  if /\.coffee/.test path
+    console.log "Compiling #{path}"
+    callback coffee.compile(file)
+  else
+    callback file
+{% endhighlight %}
 
 Now all you need to do is insert these into your expressjs config and you're
 good to go!
 
-    # server.coffee
-    handlers = require 'handlers'
+{% highlight coffeescript %}
+# server.coffee
+handlers = require 'handlers'
 
-    # ...
+# ...
 
-    app.use assetManager
-      js:
-        route: /\/assets\/js\/[0-9]+\/.*\.js/
-        path: './assets/javascripts/'
-        dataType: 'javascript'
-        files: ['sprintf.js','main.coffee']
-        preManipulate:
-          '^': [handlers.coffeeRenderer]
-      css:
-        route: /\/assets\/css\/[0-9]+\/.*\.css/
-        path: './assets/stylesheets/'
-        dataType: 'css'
-        files: ['style.sass']
-        preManipulate:
-          '^': [handlers.sassRenderer]
+app.use assetManager
+  js:
+    route: /\/assets\/js\/[0-9]+\/.*\.js/
+    path: './assets/javascripts/'
+    dataType: 'javascript'
+    files: ['sprintf.js','main.coffee']
+    preManipulate:
+      '^': [handlers.coffeeRenderer]
+  css:
+    route: /\/assets\/css\/[0-9]+\/.*\.css/
+    path: './assets/stylesheets/'
+    dataType: 'css'
+    files: ['style.sass']
+    preManipulate:
+      '^': [handlers.sassRenderer]
+{% endhighlight %}
 
 Easy!
 

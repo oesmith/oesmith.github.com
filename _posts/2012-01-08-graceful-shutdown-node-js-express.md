@@ -11,19 +11,21 @@ complete, the worker exits.
 
 Here's a quick example:
 
-    var http = require('http');
+{% highlight javascript %}
+var http = require('http');
 
-    var app = http.createServer(function (req, res) {
-      res.writeHead(200, {'Content-Type': 'text/plain'});
-      setTimeout(function () { res.end('OK\n'); }, 5000);
-    });
+var app = http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  setTimeout(function () { res.end('OK\n'); }, 5000);
+});
 
-    process.on('SIGTERM', function () {
-      console.log("Closing");
-      app.close();
-    });
+process.on('SIGTERM', function () {
+  console.log("Closing");
+  app.close();
+});
 
-    app.listen(3000);
+app.listen(3000);
+{% endhighlight %}
 
 Since I'm using redis on howmanyleft, I need to close my redis connection
 gracefully too.  The [close][4] event on the HTTP server fires when all
@@ -31,25 +33,27 @@ connections have closed, so close my redis connection there.  [node_redis][5]
 flushes all active redis commands when you call quit, so I won't lose any
 data.
 
-    var http = require('http'),
-        redis = require('redis').createClient();
+{% highlight javascript %}
+var http = require('http'),
+    redis = require('redis').createClient();
 
-    var app = http.createServer(function (req, res) {
-      res.writeHead(200, {'Content-Type': 'text/plain'});
-      setTimeout(function () { res.end('OK\n'); }, 5000);
-    });
+var app = http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  setTimeout(function () { res.end('OK\n'); }, 5000);
+});
 
-    process.on('SIGTERM', function () {
-      console.log("Closing");
-      app.close();
-    });
+process.on('SIGTERM', function () {
+  console.log("Closing");
+  app.close();
+});
 
-    app.on('close', function () {
-      console.log("Closed");
-      redis.quit();
-    });
+app.on('close', function () {
+  console.log("Closed");
+  redis.quit();
+});
 
-    app.listen(3000);
+app.listen(3000);
+{% endhighlight %}
 
 [1]: http://www.howmanyleft.co.uk
 [2]: http://httpcats.herokuapp.com/502

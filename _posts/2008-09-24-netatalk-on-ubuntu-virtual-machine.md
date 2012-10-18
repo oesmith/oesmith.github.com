@@ -57,15 +57,17 @@ Finally, to enable zeroconf/bonjour discovery of the shares on the system,
 install avahi-daemon and add a service definition to 
 `/etc/avahi/services/afpd.service` to advertise the afp service.
 
-    <?xml version="1.0" standalone=‘no’?><!–*-nxml-*–>
-    <!DOCTYPE service-group SYSTEM "avahi-service.dtd">
-    <service-group>
-      <name>%u</name>
-      <service>
-        <type>_afpovertcp._tcp</type>
-        <port>548</port>
-      </service>
-    </service-group>
+{% highlight xml %}
+<?xml version="1.0" standalone=‘no’?><!–*-nxml-*–>
+<!DOCTYPE service-group SYSTEM "avahi-service.dtd">
+<service-group>
+  <name>%u</name>
+  <service>
+    <type>_afpovertcp._tcp</type>
+    <port>548</port>
+  </service>
+</service-group>
+{% endhighlight %}
 
 And that’s it! You should now be able to reliably mount your home directory on
 the Linux virtual machine from OS X.

@@ -1,2 +1,3 @@
 auto: true
 lsi: true
+pygments: true

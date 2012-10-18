@@ -19,42 +19,46 @@ the ServiceHost element in the .svc file associated with your service.
 
 Here’s a quick and dirty example:
 
-    <%@ ServiceHost Factory="System.ServiceModel.Activation.WebServiceHostFactory"
-        Language="C#" Service="Service1" %>
-    using System.ServiceModel;
-    using System.ServiceModel.Channels;
-    using System.ServiceModel.Web;
-    using System.Runtime.Serialization;
-    [ServiceContract]
-    public class Service1
+{% highlight csharp %}
+<%@ ServiceHost Factory="System.ServiceModel.Activation.WebServiceHostFactory"
+    Language="C#" Service="Service1" %>
+using System.ServiceModel;
+using System.ServiceModel.Channels;
+using System.ServiceModel.Web;
+using System.Runtime.Serialization;
+[ServiceContract]
+public class Service1
+{
+    [OperationContract]
+    [WebGet(UriTemplate="{id}")]
+    DataType GetData(string id)
     {
-        [OperationContract]
-        [WebGet(UriTemplate="{id}")]
-        DataType GetData(string id)
-        {
-            return new DataType(1,"Foo");
-        }
+        return new DataType(1,"Foo");
     }
-    [DataContract(Name="data",Namespace="http://example.org")]
-    public class DataType
+}
+[DataContract(Name="data",Namespace="http://example.org")]
+public class DataType
+{
+    public DataType(int id, string name)
     {
-        public DataType(int id, string name)
-        {
-            this.id = id;
-            this.name = name;
-        }
-        [DataMember]
-        int id;
-        [DataMember]
-        string name;
+        this.id = id;
+        this.name = name;
     }
+    [DataMember]
+    int id;
+    [DataMember]
+    string name;
+}
+{% endhighlight %}
 
 Calling `http://host/Service1.svc/123` returns:
 
-    <data xmlns="http://example.org" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-        <id>1</id>
-        <name>Foo</name>
-    </data>
+{% highlight xml %}
+<data xmlns="http://example.org" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <id>1</id>
+    <name>Foo</name>
+</data>
+{% endhighlight %}
 
 That’s actually quite easy really, isn’t it? If only the MSDN docs told you
 that..

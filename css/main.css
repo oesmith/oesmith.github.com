@@ -19,15 +19,9 @@ textarea {
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+    font-size: 16px;
+    line-height: 38px;
 }
-
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate.
- * Customize the background color to match your design.
- */
 
 ::-moz-selection {
     background: #b3d4fc;
@@ -39,10 +33,6 @@ body {
     text-shadow: none;
 }
 
-/*
- * A better looking default horizontal rule
- */
-
 hr {
     display: block;
     height: 1px;
@@ -52,34 +42,9 @@ hr {
     padding: 0;
 }
 
-/*
- * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
- */
-
 img {
     vertical-align: middle;
 }
-
-/* web icons */
-.fc-webicon { display: inline-block; background-size: 100%; width: 30px; height: 30px; text-indent: -999em; text-align: left; -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; margin-bottom: 5px; }
-.fc-webicon:hover { margin: -1px 0 1px; -moz-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); box-shadow: 0 2px 0 rgba(0, 0, 0, 0.25); }
-
-/* Github */
-.no-svg .fc-webicon.github { background: url("/images/fc-webicon-github-m.png"); }
-.svg .fc-webicon.github { background: url("/images/fc-webicon-github.svg"); }
-
-/* LinkedIn */
-.no-svg .fc-webicon.linkedin { background: url("/images/fc-webicon-linkedin-m.png"); }
-.svg .fc-webicon.linkedin { background: url("/images/fc-webicon-linkedin.svg"); }
-
-/* Mail */
-.no-svg .fc-webicon.mail { background: url("/images/fc-webicon-mail-m.png"); }
-.svg .fc-webicon.mail { background: url("/images/fc-webicon-mail.svg"); }
-
-/* Twitter */
-.no-svg .fc-webicon.twitter { background: url("/images/fc-webicon-twitter-m.png"); }
-.svg .fc-webicon.twitter { background: url("/images/fc-webicon-twitter.svg"); }
-
 
 /* ==========================================================================
    Author's custom styles
@@ -87,11 +52,11 @@ img {
 
 body {
   padding: 0 24px;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Open Sans, sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: ABeeZee, sans-serif;
+  font-family: Open Sans, sans-serif;
 }
 
 a, a:visited, a:active {
@@ -99,24 +64,28 @@ a, a:visited, a:active {
   text-decoration: none;
 }
 
+header {
+  margin-top: 4px;
+  height: 56px;
+}
+
+.topbar {
+  position: fixed;
+  z-index: 99;
+  height: 4px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #D55121;
+}
+
 h1 {
-  font-size: 20px;
-  line-height: 28px;
-  margin: 0.67em 0 0 0;
+  font-size: 24px;
+  line-height: 56px;
 }
 
 h1 a, h1 a:visited, h1 a:active {
   color: #D55121;
-}
-
-.tagline {
-  font-size: 14px;
-  line-height: 22px;
-  color: #888;
-}
-
-.social {
-  margin: 10px 0;
 }
 
 article > footer:before {
@@ -147,7 +116,6 @@ article time {
 }
 
 body > footer {
-  /* border-top: 1px solid #aaa; */
   padding: 1em 0;
   margin-top: 2em;
 }
@@ -161,6 +129,7 @@ body > footer p {
 }
 
 h2 {
+  margin: 48px 0 24px 0;
   font-size: 22px;
   line-height: 33px;
   font-weight: normal;
@@ -172,7 +141,7 @@ h3 {
   font-size: 16px;
   line-height: 22px;
   font-weight: normal;
-  margin: 1em 0;
+  margin: 48px 0 0 0;
 }
 
 ul.posts {
@@ -192,13 +161,20 @@ ul.posts li span {
   white-space: nowrap;
 }
 
+ul.social {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 code {
-  font-family: Source Code Pro, monospace;
-  font-size: 14px;
-  line-height: 18px;
+  font-family: Fira Mono, monospace;
 }
 
 pre {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 48px 0;
   padding: 10px 20px;
   border: 1px solid #ddd;
   background: #eee;
@@ -209,27 +185,25 @@ pre {
 
 @media only screen and (min-width: 768px) {
   body {
+    padding: 0;
+  }
+  h1, .content, footer {
     margin: 0 auto;
     width: 720px;
   }
-  body > header {
-    height: 60px;
+  ul.social {
+    width: 720px;
+    height: 38px;
   }
-  body > header h1 {
+  ul.social li {
     float: left;
-    line-height: 40px;
-    margin: 15px 10px 5px 0;
-  }
-  body > header .tagline {
-    float: left;
-    line-height: 32px;
-    margin: 20px 10px 0 0;
-  }
-  body > header .social {
-    float: right;
-    margin: 12px 0 5px 0;
+    width: 240px;
+    padding: 0;
+    margin: 0;
   }
 }
+
+/* Code hilighting */
 .hll { background-color: #ffffcc }
 .c { color: #408080; font-style: italic } /* Comment */
 .err { border: 1px solid #FF0000 } /* Error */

@@ -1,3 +1,2 @@
-auto: true
 lsi: true
-pygments: true
+highlighter: pygments

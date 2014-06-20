@@ -2,10 +2,8 @@
 layout: default
 ---
 <article>
-  <header>
-    <h2>{{ page.title }}</h2>
-    <time class="date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
-  </header>
+  <h2>{{ page.title }}</h2>
+  <time class="date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
   {{ content }}
   <footer>
     <p><a href="/">&laquo; Home</a></p>

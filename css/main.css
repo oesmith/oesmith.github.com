@@ -52,11 +52,14 @@ img {
 
 body {
   padding: 0 24px;
-  font-family: Open Sans, sans-serif;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 1.7;
 }
 
 h1, h2, h3 {
-  font-family: Open Sans, sans-serif;
+  font-weight: 300;
 }
 
 a, a:visited, a:active {
@@ -66,7 +69,6 @@ a, a:visited, a:active {
 
 header {
   margin-top: 4px;
-  height: 56px;
 }
 
 .topbar {
@@ -80,8 +82,9 @@ header {
 }
 
 h1 {
-  font-size: 24px;
-  line-height: 56px;
+  font-size: 1.8rem;
+  line-height: 1;
+  text-align: center;
 }
 
 h1 a, h1 a:visited, h1 a:active {
@@ -90,8 +93,7 @@ h1 a, h1 a:visited, h1 a:active {
 
 article > footer:before {
   content: "~";
-  font-size: 60px;
-  line-height: 30px;
+  font-size: 4rem;
   text-align: center;
   display: block;
   color: #aaa;
@@ -110,37 +112,20 @@ article img {
 }
 
 article time {
-  font-size: 14px;
+  display: block;
+  font-size: 1rem;
   color: #aaa;
-  line-height: 20px;
-}
-
-body > footer {
-  padding: 1em 0;
-  margin-top: 2em;
-}
-
-body > footer p {
-  font-size: 12px;
-  line-height: 30px;
-  padding: 0;
-  margin: 0;
-  color: #ccc;
+  text-align: center;
 }
 
 h2 {
   margin: 48px 0 24px 0;
-  font-size: 22px;
-  line-height: 33px;
-  font-weight: normal;
+  font-size: 2.5rem;
   color: #666;
-  border-bottom: 1px solid #aaa;
+  text-align: center;
 }
 
 h3 {
-  font-size: 16px;
-  line-height: 22px;
-  font-weight: normal;
   margin: 48px 0 0 0;
 }
 
@@ -156,7 +141,7 @@ ul.posts li {
 }
 
 ul.posts li span {
-  font-size: 10px;
+  font-size: 0.7em;
   color: #999;
   white-space: nowrap;
 }
@@ -172,8 +157,7 @@ code {
 }
 
 pre {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 0.9rem;
   margin: 48px 0;
   padding: 10px 20px;
   border: 1px solid #ddd;
@@ -183,24 +167,16 @@ pre {
   word-wrap: normal;
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    padding: 0;
-  }
-  h1, .content, footer {
-    margin: 0 auto;
-    width: 720px;
-  }
-  ul.social {
-    width: 720px;
-    height: 38px;
-  }
-  ul.social li {
-    float: left;
-    width: 240px;
-    padding: 0;
-    margin: 0;
-  }
+.content, footer {
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+body > footer {
+  margin-top: 3rem;
+  color: #999;
+  text-align: center;
+  font-size: 1rem;
 }
 
 /* Code hilighting */

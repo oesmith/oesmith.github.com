@@ -1,104 +1,41 @@
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-html,
-button,
-input,
-select,
-textarea {
-    color: #222;
+html {
+  color: #222;
+  font-family: sans-serif;
 }
 
 body {
-    font-size: 16px;
-    line-height: 38px;
-}
-
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-img {
-    vertical-align: middle;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-body {
-  padding: 0 24px;
-  font-family: "Roboto Slab";
+  font-size: 1.25rem;
   font-weight: 300;
-  font-size: 1.3rem;
   line-height: 1.7;
+  padding: 0 24px;
 }
 
 h1, h2, h3 {
   font-weight: 300;
+  line-height: 1.2;
 }
 
 a, a:visited, a:active {
   color: #184D68;
-  text-decoration: none;
-}
-
-header {
-  margin-top: 4px;
-}
-
-.topbar {
-  position: fixed;
-  z-index: 99;
-  height: 4px;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #D55121;
 }
 
 h1 {
   font-size: 1.8rem;
   line-height: 1;
+  margin: 0;
   text-align: center;
 }
 
 h1 a, h1 a:visited, h1 a:active {
   color: #D55121;
+  text-decoration: none;
 }
 
-article > footer:before {
-  content: "~";
-  font-size: 4rem;
+header {
+  color: gray;
+  line-height: 1.4;
+  margin: 24px 0;
   text-align: center;
-  display: block;
-  color: #aaa;
-  margin: 0;
-  padding: 0;
 }
 
 article a, article a:visited, article a:active {
@@ -106,22 +43,31 @@ article a, article a:visited, article a:active {
 }
 
 article img {
-  max-width: 100%;
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 article time {
+  color: #aaa;
   display: block;
   font-size: 1rem;
-  color: #aaa;
   text-align: center;
 }
 
+article footer {
+  font-size: 3rem;
+  text-align: center;
+}
+
+article footer a {
+  text-decoration: none;
+}
+
 h2 {
-  margin: 48px 0 24px 0;
-  font-size: 2.5rem;
   color: #666;
+  font-size: 2.5rem;
+  margin: 48px 0 24px 0;
   text-align: center;
 }
 
@@ -130,10 +76,10 @@ h3 {
 }
 
 ul.posts {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   color: #666;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 ul.posts li {
@@ -141,28 +87,39 @@ ul.posts li {
 }
 
 ul.posts li span {
-  font-size: 0.7em;
   color: #999;
+  font-size: 0.7em;
   white-space: nowrap;
 }
 
-ul.social {
+.social {
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+.social-item {
+  display: inline-block;
+  margin: 4px;
+}
+
+.social-icon {
+  color: #666;
+  height: 24px;
+  width: 24px;
 }
 
 code {
-  font-family: Fira Mono, monospace;
+  font-family: monospace;
 }
 
 pre {
+  background: #eee;
+  border: 1px solid #ddd;
   font-size: 0.9rem;
   margin: 48px 0;
-  padding: 10px 20px;
-  border: 1px solid #ddd;
-  background: #eee;
   overflow: auto;
+  padding: 10px 20px;
   white-space: pre;
   word-wrap: normal;
 }
@@ -173,10 +130,14 @@ pre {
 }
 
 body > footer {
-  margin-top: 3rem;
   color: #999;
-  text-align: center;
   font-size: 1rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+svg {
+  fill: currentColor;
 }
 
 /* Code hilighting */

@@ -10,86 +10,51 @@ body {
   padding: 0 24px;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-weight: 300;
   line-height: 1.2;
-}
-
-a, a:visited, a:active {
-  color: #184D68;
+  text-align: center;
 }
 
 h1 {
+  color: #D55121;
   font-size: 1.8rem;
-  line-height: 1;
-  margin: 0;
-  text-align: center;
 }
 
-h1 a, h1 a:visited, h1 a:active {
-  color: #D55121;
+h2 {
+  color: #666;
+  font-size: 1.7rem;
+  margin-bottom: 0;
+}
+
+a {
+  color: inherit;
+}
+
+h1 a {
   text-decoration: none;
 }
 
-header {
-  color: gray;
-  line-height: 1.4;
-  margin: 24px 0;
-  text-align: center;
-}
-
-article a, article a:visited, article a:active {
-  color: #D55121;
-}
-
-article img {
+img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
 }
 
-article time {
+hr {
+  background-color: #ccc;
+  border: none;
+  height: 1px;
+  margin: 64px auto;
+  max-width: 200px;
+  width: 100%;
+}
+
+time {
   color: #aaa;
   display: block;
   font-size: 1rem;
   text-align: center;
-}
-
-article footer {
-  font-size: 3rem;
-  text-align: center;
-}
-
-article footer a {
-  text-decoration: none;
-}
-
-h2 {
-  color: #666;
-  font-size: 2.5rem;
-  margin: 48px 0 24px 0;
-  text-align: center;
-}
-
-h3 {
-  margin: 48px 0 0 0;
-}
-
-ul.posts {
-  color: #666;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-ul.posts li {
-  margin: 10px 0;
-}
-
-ul.posts li span {
-  color: #999;
-  font-size: 0.7em;
-  white-space: nowrap;
 }
 
 .social {
@@ -129,7 +94,7 @@ pre {
   max-width: 700px;
 }
 
-body > footer {
+footer {
   color: #999;
   font-size: 1rem;
   margin-top: 3rem;
@@ -138,6 +103,14 @@ body > footer {
 
 svg {
   fill: currentColor;
+}
+
+.permalink {
+  font-size: 80%;
+}
+
+b, strong {
+  font-weight: 400;
 }
 
 /* Code hilighting */

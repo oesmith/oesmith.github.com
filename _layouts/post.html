@@ -2,7 +2,7 @@
 layout: default
 ---
 <article>
-  <h2>{{ page.title }}</h2>
+  <h2>{{ page.title }} <a class="permalink" href="{{ post.url }}">&raquo;</a></h2>
   <time class="date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time>
   {{ content }}
   <footer>

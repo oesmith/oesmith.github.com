@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Subversion and Visual C++
-alias: /post/470739483/subversion-and-visual-c
 ---
 Despite mostly using Java for the work I’m doing at the moment, there’s still
 some call for a bit of C++. Visual Studio 2005\* is still the daddy

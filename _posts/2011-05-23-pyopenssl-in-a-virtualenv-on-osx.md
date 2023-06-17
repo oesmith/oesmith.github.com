@@ -1,7 +1,6 @@
 ---
 layout: post
 title: PyOpenSSL in a virtualenv on OS X
-alias: /post/5762918720/pyopenssl-in-a-virtualenv-on-os-x
 ---
 If you're a Python programmer, no doubt you're now familiar with
 [virtualenv][1].  One of its nicest features is `--no-site-packages`, which

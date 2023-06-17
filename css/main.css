@@ -7,31 +7,38 @@ body {
   font-size: 1.25rem;
   font-weight: 300;
   line-height: 1.7;
+  margin: 0 auto;
+  max-width: 700px;
   padding: 0 24px;
 }
 
-h1, h2 {
+header {
+  display: flex;
+  padding: 24px 0;
+  line-height: 1.3;
+  font-size: 2rem;
+}
+
+.identity, h1 {
   font-weight: 300;
-  line-height: 1.2;
-  text-align: center;
+}
+
+.identity {
+  color: #D55121;
+  flex-grow: 1;
 }
 
 h1 {
-  color: #D55121;
-  font-size: 1.8rem;
-}
-
-h2 {
   color: #666;
   font-size: 1.7rem;
-  margin-bottom: 0;
+  line-height: 1.2;
 }
 
 a {
   color: inherit;
 }
 
-h1 a {
+.identity a {
   text-decoration: none;
 }
 
@@ -41,20 +48,12 @@ img {
   max-width: 100%;
 }
 
-hr {
-  background-color: #ccc;
-  border: none;
-  height: 1px;
-  margin: 64px auto;
-  max-width: 200px;
-  width: 100%;
+time {
+  color: #666;
 }
 
-time {
-  color: #aaa;
+article time {
   display: block;
-  font-size: 1rem;
-  text-align: center;
 }
 
 .social {
@@ -89,16 +88,9 @@ pre {
   word-wrap: normal;
 }
 
-.content, footer {
-  margin: 0 auto;
-  max-width: 700px;
-}
-
 footer {
-  color: #999;
-  font-size: 1rem;
+  color: #666;
   margin-top: 3rem;
-  text-align: center;
 }
 
 svg {

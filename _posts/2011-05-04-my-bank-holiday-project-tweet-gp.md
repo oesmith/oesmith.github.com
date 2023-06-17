@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "My Bank Holiday Project: Tweet GP"
-alias: /post/5195596219/my-bank-holiday-project-tweet-gp
 ---
 This is [my latest project][1] - a simple little web app that plays back
 twitter feeds from F1 races.  It's just like a Sky+ box, but for F1 tweets.  If

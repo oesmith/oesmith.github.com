@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Graceful server shutdown with node.js / express
-alias: /post/15532216845/graceful-server-shutdown-with-node-js-express
 ---
 [howmanyleft.co.uk][1] runs its node.js workers behind supervisord.  To avoid
 dropping requests with [502s][2] when restarting workers, I hook into the

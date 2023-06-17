@@ -1,7 +1,6 @@
 ---
 layout: post
 title: RESTful Services in Visual C# 2008
-alias: /post/470772175/restful-services-in-visual-c-2008
 ---
 Here’s a problem that had me scratching my head for a while this weekend. How
 do I create a simple REST service using WCF (Windows Communication Foundation)?

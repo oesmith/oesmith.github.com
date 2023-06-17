@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Embedding fonts in Flex apps
-alias: /post/470852431/embedding-fonts-in-flex-apps
 ---
 Recently I’ve been developing a Flex application at work using Adobe’s free
 Flex SDK. If you want to be able to draw transparent text labels in Flex, you

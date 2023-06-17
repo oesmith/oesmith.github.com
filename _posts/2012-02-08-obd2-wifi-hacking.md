@@ -1,7 +1,6 @@
 ---
 layout: post
 title: OBDII Wi-Fi Hacking
-alias: /post/17280225470/obdii-wi-fi-hacking
 ---
 There are plenty of these OBDII WiFi modules advertised for sale on eBay.  I've
 recently bought a RenaultSport Clio which has an OBDII port, so I picked up one

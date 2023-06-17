@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Running openoffice/libreoffice as a service
-alias: /post/5670961061/running-openoffice-libreoffice-as-a-service
 ---
 So, you're trying to use JODConverter or unoconverter, you've set up openoffice
 to launch as a service in the background somewhere, but it's not going

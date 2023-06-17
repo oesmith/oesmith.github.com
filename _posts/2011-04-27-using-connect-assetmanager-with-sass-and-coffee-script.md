@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Using connect-assetmanager with sass and coffee-script
-alias: /post/4981762820/using-connect-assetmanager-with-sass-and-coffee-script
 ---
 I'm a big fan of using as few curly-brackets as possible in my code, which
 means I love writing my stylesheets using [Sass][1] and my javascripts using

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Netatalk on an Ubuntu virtual machine
-alias: /post/470778673/netatalk-on-an-ubuntu-virtual-machine
 ---
 I tend to develop on a MacBook running OS X Leopard. In order to keep my main
 Leopard system clean and tidy, I use Parallels desktop to run my development

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Time for a project...
-alias: /post/470785231/time-for-a-project
 ---
 Something to distract me from the television: an open-source project!
 

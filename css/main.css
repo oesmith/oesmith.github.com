@@ -34,6 +34,21 @@ h1 {
   line-height: 1.2;
 }
 
+.posts {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post {
+  margin: 1em 0;
+}
+
+.post time {
+  display: block;
+  font-size: 0.9em;
+}
+
 a {
   color: inherit;
 }
@@ -73,6 +88,11 @@ article time {
   width: 24px;
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 code {
   font-family: monospace;
 }
@@ -81,9 +101,9 @@ pre {
   background: #eee;
   border: 1px solid #ddd;
   font-size: 0.9rem;
-  margin: 48px 0;
+  margin: 2em 0;
   overflow: auto;
-  padding: 10px 20px;
+  padding: 1em;
   white-space: pre;
   word-wrap: normal;
 }

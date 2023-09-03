@@ -86,7 +86,7 @@ a {
   text-decoration: none;
 }
 
-img {
+article img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
@@ -151,6 +151,23 @@ svg {
 
 b, strong {
   font-weight: 400;
+}
+
+
+@media screen and (max-width: 899px) {
+  .sbs img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .sbs {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+  }
 }
 
 @media (prefers-color-scheme: light) {

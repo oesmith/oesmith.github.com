@@ -2,12 +2,27 @@
 layout: default
 title: Olly Smith
 ---
+<div class="bio">
+  <h2>About me</h2>
 
-<ul class="posts">
-{% for post in site.posts %}
-<li class="post">
-  <time class="date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
-  <a href="{{post.url}}">{{ post.title }}</a>
-</li>
-{% endfor %}
-</ul>
+  <p>Hello 👋, I'm Olly Smith, a seasoned full-stack software engineer with two
+  decades of experience in the tech industry. During my career, I've had the
+  privilege of working at some of the world's most impactful companies,
+  including a tenure at Google spanning over a decade.
+
+  <p>My skill set extends across the entire software development lifecycle,
+  from building intuitive user interfaces to diving into scalable distributed
+  systems. I thrive in dynamic, fast-paced environments, using my deep
+  technical experience to solve complex problems.
+</div>
+
+<div class="writing">
+  <h2>Writing</h2>
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li class="post">
+      <a href="{{post.url}}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div.>
